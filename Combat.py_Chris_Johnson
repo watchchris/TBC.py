@@ -1,0 +1,31 @@
+import Tbc
+
+def fight(self, c1, c2):
+    keepGoing = True
+    while keepGoing:
+        c1.hit(c2)
+        c2.hit(c1)
+
+        print(f"{c1.name} HP: {c1.hitpoint}")
+        print(f"{c2.name} HP: {c2.hitpoint}")
+        print()
+
+        if c1.hitpoint <= 0:
+            print(f"{c1.name} Loses")
+            keepGoing = False
+
+        elif c2.hitpoint <= 0:
+            print(f"{c2.name} Loses")
+            keepGoing = False
+
+            round = input("Press <ENTER> for another round")
+
+def main():
+    c1 = ("Chairman Fred", 100, 30, 10, 10)
+    c2 = ("Hoover", 100, 40, 10, 0)
+
+if __name__ == "__main__":
+    main()
+
+
+
